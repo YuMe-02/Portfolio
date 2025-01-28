@@ -1,0 +1,191 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  width: 90vw;
+  height: 90vh;
+  position: relative;
+}
+
+/* Corner borders */
+.corner-border {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-color: #fff;
+  border-style: solid;
+  pointer-events: none;
+}
+
+.corner-top-left {
+  top: 0;
+  left: 0;
+  border-width: 2px 0 0 2px;
+}
+
+.corner-top-right {
+  top: 0;
+  right: 0;
+  border-width: 2px 2px 0 0;
+}
+
+.corner-bottom-left {
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 2px 2px;
+}
+
+.corner-bottom-right {
+  bottom: 0;
+  right: 0;
+  border-width: 0 2px 2px 0;
+}
+
+/* Header styles */
+.header {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+.header p {
+  font-size: 1.5rem;
+  color: #bbb;
+}
+
+/* Menu styles */
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+  font-size: 1.2rem;
+}
+
+.menu ul li a:hover {
+  color: #888;
+}
+
+/* Footer styles */
+.footer {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.toggle-options {
+  display: flex;
+  gap: 15px;
+}
+
+/* Recording interface elements */
+.rec-indicator {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.rec-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+.timer {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 12px;
+  font-family: monospace;
+  color: #fff;
+}
+
+.quality {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 12px;
+  font-family: monospace;
+  color: #fff;
+}
+
+/* Loader styles */
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 4px;
+  color: #fff;
+}
+
+.loader span {
+  display: inline-block;
+  animation: letterFade 2s infinite;
+  opacity: 0;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+@keyframes letterFade {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.loader span:nth-child(1) { animation-delay: 0ms; }
+.loader span:nth-child(2) { animation-delay: 200ms; }
+.loader span:nth-child(3) { animation-delay: 400ms; }
+.loader span:nth-child(4) { animation-delay: 600ms; }
+.loader span:nth-child(5) { animation-delay: 800ms; }
+.loader span:nth-child(6) { animation-delay: 1000ms; }
+.loader span:nth-child(7) { animation-delay: 1200ms; }
+.loader span:nth-child(8) { animation-delay: 1400ms; }
