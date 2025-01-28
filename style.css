@@ -1,0 +1,149 @@
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+  width: 90%;
+  max-width: 1200px;
+  border: 1px solid #444;
+  position: relative;
+}
+
+.header {
+  text-align: left;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.header p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu ul li {
+  font-size: 1.2rem;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+  color: #888;
+}
+
+.footer {
+  text-align: left;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.toggle-options {
+  display: flex;
+  gap: 10px;
+}
+
+.toggle-options label {
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.footer p {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Loader Styles */
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader span {
+  font-size: 2rem;
+  color: #fff;
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+.animate-ping {
+  animation: ping 1s infinite;
+}
+
+.delay_1 {
+  animation-delay: 100ms !important;
+}
+
+.delay_2 {
+  animation-delay: 200ms !important;
+}
+
+.delay_3 {
+  animation-delay: 300ms !important;
+}
+
+.delay_4 {
+  animation-delay: 400ms !important;
+}
+
+.delay_5 {
+  animation-delay: 500ms !important;
+}
+
+.delay_6 {
+  animation-delay: 600ms !important;
+}
+
+.delay_7 {
+  animation-delay: 700ms !important;
+}
