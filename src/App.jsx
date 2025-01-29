@@ -20,7 +20,7 @@ function App() {
       <Menu />
       <Viewfinder />
       <Loader />
-      <Footer />
+      {/* <Footer />  */}
     </div>
   );
 }

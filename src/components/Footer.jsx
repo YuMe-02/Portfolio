@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="toggle-options">
+      {/* <div className="toggle-options">
         <label>
           <input type="radio" name="theme" defaultChecked /> Dark
         </label>
@@ -13,8 +13,8 @@ const Footer = () => {
         <label>
           <input type="radio" name="font" /> Monospaced
         </label>
-      </div>
-      <p>&copy; Darren Yu</p>
+      </div> */}
+      {/* <p>&copy; Darren Yu</p> */}
     </footer>
   );
 };

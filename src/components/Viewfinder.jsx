@@ -7,8 +7,9 @@ const Viewfinder = () => {
         <span className="rec-dot"></span>
         <span>REC</span>
       </div>
-      <div className="timer">165min</div>
-      <div className="quality">HQ 1080/60p</div>
+      <div className="timer">余永康</div>
+      <div className="location">San Francisco, California</div>
+      <div className="quality">&copy; Darren Yu 2025</div>
     </>
   );
 };

@@ -110,10 +110,10 @@ body {
   justify-content: space-between;
 }
 
-.toggle-options {
+/* .toggle-options {
   display: flex;
   gap: 15px;
-}
+} */
 
 /* Recording interface elements */
 .rec-indicator {
@@ -139,6 +139,16 @@ body {
   position: absolute;
   top: 20px;
   left: 20px;
+  font-size: 12px;
+  font-family: monospace;
+  color: #fff;
+}
+
+/* Location styles */
+.location {
+  position: absolute;
+  bottom: 20px;  /* Changed from top to bottom */
+  right: 20px;   /* Changed from left to right */
   font-size: 12px;
   font-family: monospace;
   color: #fff;
