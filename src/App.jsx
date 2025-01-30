@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
-import Footer from './components/Footer';
+import About from './components/About'; 
+// import Footer from './components/Footer';
 import Menu from './components/Menu';
 import Loader from './components/Loader';
 import Viewfinder from './components/Viewfinder';
@@ -18,6 +19,7 @@ function App() {
       {/* Your existing components */}
       <Header />
       <Menu />
+      <About />
       <Viewfinder />
       <Loader />
       {/* <Footer />  */}
