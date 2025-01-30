@@ -74,6 +74,37 @@ body {
   color: #bbb;
 }
 
+/* Social Media Icons */
+
+.icons {
+  list-style: none;  /* Removes bullet points */
+  display: flex;  /* Aligns items in a row */
+  gap: 15px;  /* Adds space between icons */
+  padding: 0;
+  margin: 0;
+}
+
+.icons li {
+  display: flex;
+  align-items: center;
+}
+
+.icons a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.icons svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+
+
+
+
 /* Menu styles */
 .menu {
   position: absolute;
