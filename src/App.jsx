@@ -5,6 +5,7 @@ import About from './components/About';
 import Menu from './components/Menu';
 import Loader from './components/Loader';
 import Viewfinder from './components/Viewfinder';
+import Inspo from './components/Inspo';
 
 // App.jsx
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Header />
       <Menu />
       <About />
+      <Inspo />
       <Viewfinder />
       <Loader />
       {/* <Footer />  */}

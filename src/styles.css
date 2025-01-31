@@ -101,10 +101,6 @@ body {
   fill: white;
 }
 
-
-
-
-
 /* Menu styles */
 .menu {
   position: absolute;
@@ -222,6 +218,35 @@ body {
 .about-content p:last-child {
   margin-bottom: 0;
 }
+
+/* Inspo Styles*/
+.about-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 800px;
+  z-index: 1;
+}
+
+.inspo-content {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.inspo-content p {
+  margin-bottom: 1.5rem;
+}
+
+/* Ensure text is readable */
+.inspo-content p:last-child {
+  margin-bottom: 0;
+}
+
 
 /* Loader styles */
 .loader {
