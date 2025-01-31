@@ -1,14 +1,25 @@
 import React from "react";
 
-const Menu = () => {
+const Menu = ({ onNavigate }) => {
   return (
     <nav className="menu">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Info</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Copycats</a></li>
+        <li><a href="#" onClick={(e) => {
+          e.preventDefault();
+          onNavigate.home();
+        }}>Home</a></li>
+        <li><a href="#" onClick={(e) => {
+          e.preventDefault();
+          onNavigate.about();
+        }}>About</a></li>
+        <li><a href="#" onClick={(e) => {
+          e.preventDefault();
+          onNavigate.projects();
+        }}>Projects</a></li>
+        <li><a href="#" onClick={(e) => {
+          e.preventDefault();
+          onNavigate.inspiration();
+        }}>Inspiration</a></li>
       </ul>
     </nav>
   );
