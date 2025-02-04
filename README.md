@@ -1,3 +1,7 @@
+# Brief Description
+
+This project is a simple portfolio style with a camera and cinema theme. It will show case my past engineering projects and contain informations that users can find useful about me.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
