@@ -1,6 +1,6 @@
 # Brief Description
 
-This project is a simple portfolio style with a camera and cinema theme. It will show case my past engineering projects and contain informations that users can find useful about me.
+This project is a simple portfolio style with a camera and cinema theme. It will show case my past engineering projects and contain informations that users can find useful about me. Currently looking at display ideas.
 
 # Getting Started with Create React App
 
