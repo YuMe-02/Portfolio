@@ -1,0 +1,407 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  width: 90vw;
+  height: 90vh;
+  position: relative;
+  margin: 0 auto; /* Centers container */
+}
+
+/* Corner borders */
+.corner-border {
+  position: absolute;
+  width: 3vw;
+  height: 3vh;
+  border-color: #fff;
+  border-style: solid;
+  pointer-events: none;
+}
+
+.corner-top-left {
+  top: 0;
+  left: 0;
+  border-width: 2px 0 0 2px;
+}
+
+.corner-top-right {
+  top: 0;
+  right: 0;
+  border-width: 2px 2px 0 0;
+}
+
+.corner-bottom-left {
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 2px 2px;
+}
+
+.corner-bottom-right {
+  bottom: 0;
+  right: 0;
+  border-width: 0 2px 2px 0;
+}
+
+/* Header styles */
+.header {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+.header p {
+  font-size: 1.5rem;
+  color: #bbb;
+}
+
+/* Social Media Icons */
+.icons {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.icons li {
+  display: flex;
+  align-items: center;
+}
+
+.icons a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.icons svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+/* Content Container for Animations */
+.content-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 50vw;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+/* Menu styles */
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.menu ul li a:hover {
+  color: #888;
+}
+
+.menu ul li a.active {
+  color: #fff;
+}
+
+.menu ul li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
+}
+
+
+/* Recording interface elements */
+.rec-indicator {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.rec-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  animation: blink .25s infinite;
+}
+
+.timer {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 12px;
+  font-family: monospace;
+  color: #fff;
+}
+
+/* Location styles */
+.location {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 12px;
+  font-family: monospace;
+  color: #fff;
+}
+
+.quality {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 12px;
+  font-family: monospace;
+  color: #fff;
+}
+
+/* About styles */
+.about-content {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Inspo Styles */
+.inspo-content {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Add this to your existing styles.css */
+.projects-menu {
+  position: absolute;
+  top: 10%;         /* Adjust as needed for vertical positioning */
+  right: 0%;        /* Aligns it to the right margin */
+  transform: translate(160%, -50%); /* Centers vertically if needed */
+  text-align: right; /* Aligns text content to the right */
+  background-color: black;
+}
+
+.projects-menu h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-top: .5rem;
+  transition: opacity 0.3s ease;
+}
+
+.projects-menu .group {
+  margin-bottom: 2rem;
+}
+
+.projects-menu .group:hover h2 {
+  opacity: 0.7;
+}
+
+.projects-menu .text-sm {
+  font-size: 0.875rem;
+  color: #bbb;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Project Card */
+.project-card {
+  background-color: #000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  color: #bbb;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Skills Container */
+.skills-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  transition: background-color 0.3s ease;
+}
+
+.skill-tag:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Project Links */
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #888;
+}
+
+
+/* Inspo styles */
+.inspo-content p {
+  margin-bottom: 1.5rem;
+}
+
+.inspo-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Home content styles */
+.home-content {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1.2rem;
+  }
+
+  .menu {
+    left: 5%;
+  }
+
+  .menu ul li a {
+    font-size: 1.2rem;
+  }
+
+  .projects-menu {
+    width: 100%;  /* Allow it to take full width */
+    max-width: 100%; /* Prevent overflow */
+    right: 0; /* Ensures it remains within the container */
+    position: relative; /* Avoids absolute positioning issues */
+    transform: translate(30%, 0%); /* Centers vertically if needed */
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
