@@ -247,6 +247,131 @@ body {
   text-align: left;
 }
 
+/* Add this to your existing styles.css */
+.projects-menu {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  right: -500px; /* Align to the left, similar to the navigation menu */
+  transform: translateY(-50%); /* Center vertically */
+  width: 300px; /* Adjust width to match the red box */
+  max-width: 300px; /* Prevent it from stretching too far */
+  padding: 20px; /* Add padding for spacing */
+  /*  border: 1px solid rgba(255, 0, 0, 0.5); /* Optional: Add a red border for visual reference */
+  z-index: 1; /* Ensure it's above other elements */
+  background-color: green;
+}
+
+.projects-menu h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-top: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.projects-menu .group {
+  margin-bottom: 2rem;
+}
+
+.projects-menu .group:hover h2 {
+  opacity: 0.7;
+}
+
+.projects-menu .text-sm {
+  font-size: 0.875rem;
+  color: #bbb;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Project Card */
+.project-card {
+  background-color: #000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  color: #bbb;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Skills Container */
+.skills-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  transition: background-color 0.3s ease;
+}
+
+.skill-tag:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Project Links */
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #888;
+}
+
+
+/* Inspo styles */
 .inspo-content p {
   margin-bottom: 1.5rem;
 }
