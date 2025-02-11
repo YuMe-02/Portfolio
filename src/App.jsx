@@ -47,7 +47,7 @@ const App = () => {
         {activeComponent === 'inspiration' && <Inspo />}
       </div>
       
-      <Loader />
+      {/* <Loader /> */}
     </div>
   );
 };

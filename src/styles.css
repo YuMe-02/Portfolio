@@ -231,7 +231,8 @@ body {
 }
 
 .about-content p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
 .about-content p:last-child {
