@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import About from './components/About';
 import Menu from './components/Menu';
-// import Loader from './components/Loader';
 import Viewfinder from './components/Viewfinder';
 import Inspo from './components/Inspo';
 import ProjectCard from './components/ProjectCard';
