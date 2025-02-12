@@ -241,9 +241,7 @@ body {
 /* Add this to your existing styles.css */
 .projects-menu {
   position: absolute;
-  top: 10%;         /* Adjust as needed for vertical positioning */
-  right: 0%;        /* Aligns it to the right margin */
-  transform: translate(179%, -50%); /* Centers vertically if needed */
+  transform: translate(74rem, -40%); /* Centers vertically if needed */
   text-align: right; /* Aligns text content to the right */
   background-color: black;
 }
