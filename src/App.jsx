@@ -12,6 +12,17 @@ const App = () => {
   const [activeComponent, setActiveComponent] = useState('about');
   const [isAnimating, setIsAnimating] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  // Add resize listener
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleNavigation = (component) => {
     if (component !== activeComponent && !isAnimating) {
@@ -31,7 +42,9 @@ const App = () => {
     setTimeout(() => {
       const project = projectDetails[projectId];
       setSelectedProject(project);
-      setActiveComponent('project-detail');
+      if (isMobile) {
+        setActiveComponent('project-detail');
+      }
       setTimeout(() => {
         setIsAnimating(false);
       }, 500);
@@ -71,10 +84,17 @@ const App = () => {
         )}
         {activeComponent === 'about' && <About />}
         {activeComponent === 'projects' && (
-          <ProjectMenu onProjectClick={handleProjectClick} />
+          <div className="projects-layout">
+            <ProjectMenu onProjectClick={handleProjectClick} />
+            {selectedProject && !isMobile && (
+              <div className="project-detail desktop">
+                <ProjectCard {...selectedProject} />
+              </div>
+            )}
+          </div>
         )}
-        {activeComponent === 'project-detail' && selectedProject && (
-          <div className="project-detail">
+        {activeComponent === 'project-detail' && selectedProject && isMobile && (
+          <div className="project-detail mobile">
             <button 
               onClick={handleBackToProjects}
               className="mb-8 text-sm hover:opacity-70 transition-opacity"
