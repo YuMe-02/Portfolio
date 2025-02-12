@@ -4,7 +4,7 @@ const ProjectCard = ({
   title, 
   description, 
   skills = [], 
-  imageUrl = "/api/placeholder/400/250",
+  imageUrl,
   projectUrl,
   githubUrl 
 }) => {
