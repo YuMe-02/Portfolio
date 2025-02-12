@@ -20,7 +20,9 @@ body {
   width: 90vw;
   height: 90vh;
   position: relative;
-  margin: 0 auto; /* Centers container */
+  margin: 0 auto;
+  padding: 5vh 5vw;
+  box-sizing: border-box;
 }
 
 /* Corner borders */
@@ -241,9 +243,13 @@ body {
 /* Add this to your existing styles.css */
 .projects-menu {
   position: absolute;
-  transform: translate(74rem, -40%); /* Centers vertically if needed */
-  text-align: right; /* Aligns text content to the right */
+  top: 50%;
+  right: -38%;  /* Match container padding */
+  transform: translateY(-50%);
+  text-align: right;
   background-color: black;
+  width: 40%;  /* Control width relative to container */
+  max-width: 600px;  /* Prevent excessive width on large screens */
 }
 
 .projects-menu h2 {
@@ -373,8 +379,9 @@ body {
   text-align: left;
 }
 
-/* Media Queries */
+
 @media (max-width: 768px) {
+
   .header h1 {
     font-size: 2rem;
   }
@@ -390,13 +397,18 @@ body {
   .menu ul li a {
     font-size: 1.2rem;
   }
-
   .projects-menu {
-    width: 100%;  /* Allow it to take full width */
-    max-width: 100%; /* Prevent overflow */
-    right: 0; /* Ensures it remains within the container */
-    position: relative; /* Avoids absolute positioning issues */
-    transform: translate(30%, 0%); /* Centers vertically if needed */
+    width: 80%;
+    right: -35%;
+    transform: translateY(-50%);
+  }
+  
+  .container {
+    padding: 3vh 3vw;  /* Smaller padding on mobile */
+  }
+  
+  .content-container {
+    padding: 0 3vw;
   }
 
   .projects-grid {
