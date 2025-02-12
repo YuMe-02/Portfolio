@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import About from './components/About';
 import Menu from './components/Menu';
@@ -14,15 +14,22 @@ const App = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  // Add resize listener
-  React.useEffect(() => {
+  // Add resize listener with enhanced logic
+  useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      const newIsMobile = window.innerWidth < 768;
+      
+      // If transitioning from mobile to desktop while viewing a project
+      if (isMobile && !newIsMobile && activeComponent === 'project-detail') {
+        setActiveComponent('projects');
+      }
+      
+      setIsMobile(newIsMobile);
     };
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [isMobile, activeComponent]);
 
   const handleNavigation = (component) => {
     if (component !== activeComponent && !isAnimating) {
