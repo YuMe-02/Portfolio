@@ -1,22 +1,15 @@
 import React from 'react';
+import { projectDetails } from './ProjectsData';
 
 const ProjectMenu = ({ onProjectClick }) => {
-  const projects = [
-    {
-      id: "healora",
-      title: "HEALORA",
-      date: "Mar.2024",
-      category: "Portfolio",
-      type: "Design & Dev"
-    },
-    {
-      id: "emuni",
-      title: "emuni",
-      date: "Feb.2024",
-      category: "Portfolio",
-      type: "Dev"
-    }
-  ];
+  // Convert the project details object into an array and take only the needed fields
+  const projects = Object.values(projectDetails).map(({ id, title, date, category, type }) => ({
+    id,
+    title,
+    date,
+    category,
+    type
+  }));
 
   return (
     <div className="projects-menu">

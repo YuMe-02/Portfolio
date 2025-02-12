@@ -5,44 +5,18 @@ import Menu from './components/Menu';
 import Viewfinder from './components/Viewfinder';
 import Inspo from './components/Inspo';
 import ProjectCard from './components/ProjectCard';
+import ProjectMenu from './components/ProjectMenu';
+import { projectDetails } from './components/ProjectsData';
 
 const App = () => {
-  const [activeComponent, setActiveComponent] = useState('home');
+  const [activeComponent, setActiveComponent] = useState('about');
   const [isAnimating, setIsAnimating] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
-
-  const projectsData = [
-    {
-      id: "healora",
-      title: "HEALORA",
-      date: "Mar.2024",
-      category: "Portfolio",
-      type: "Design & Dev",
-      description: "AI-powered healthcare platform designed to streamline patient care by integrating real-time health monitoring and virtual assistance.",
-      skills: ["Next.js", "Tailwind CSS", "Shadcn", "Framer Motion", "Hume AI", "Groq"],
-      imageUrl: "/path-to-healora-image.jpg",
-      projectUrl: "https://healora.com",
-      githubUrl: "https://github.com/yourusername/healora"
-    },
-    {
-      id: "emuni",
-      title: "emuni",
-      date: "Feb.2024",
-      category: "Portfolio",
-      type: "Dev",
-      description: "Digital learning platform focusing on interactive educational experiences.",
-      skills: ["React", "Node.js", "MongoDB", "WebGL"],
-      imageUrl: "/path-to-emuni-image.jpg",
-      projectUrl: "https://emuni.edu",
-      githubUrl: "https://github.com/yourusername/emuni"
-    },
-    // Add more projects as needed
-  ];
 
   const handleNavigation = (component) => {
     if (component !== activeComponent && !isAnimating) {
       setIsAnimating(true);
-      setSelectedProject(null); // Reset selected project when navigating
+      setSelectedProject(null);
       setTimeout(() => {
         setActiveComponent(component);
         setTimeout(() => {
@@ -55,7 +29,7 @@ const App = () => {
   const handleProjectClick = (projectId) => {
     setIsAnimating(true);
     setTimeout(() => {
-      const project = projectsData.find(p => p.id === projectId);
+      const project = projectDetails[projectId];
       setSelectedProject(project);
       setActiveComponent('project-detail');
       setTimeout(() => {
@@ -97,22 +71,7 @@ const App = () => {
         )}
         {activeComponent === 'about' && <About />}
         {activeComponent === 'projects' && (
-          <div className="projects-menu">
-            {projectsData.map((project) => (
-              <div 
-                key={project.id}
-                className="group relative cursor-pointer mb-16"
-                onClick={() => handleProjectClick(project.id)}
-              >
-                <div className="absolute left-0 -top-2 text-sm text-gray-400">
-                  {project.date} / {project.category} / {project.type}
-                </div>
-                <h2 className="text-4xl font-light tracking-wider group-hover:opacity-70 transition-opacity duration-300">
-                  {project.title}
-                </h2>
-              </div>
-            ))}
-          </div>
+          <ProjectMenu onProjectClick={handleProjectClick} />
         )}
         {activeComponent === 'project-detail' && selectedProject && (
           <div className="project-detail">
