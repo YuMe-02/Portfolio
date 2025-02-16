@@ -1,14 +1,14 @@
 // projectsData.js
 export const projectDetails = {
-  healora: {
-    id: "healora",
+  customerChurn: {
+    id: "customerChurn",
     title: "AI Customer Churn",
-    date: "Mar.2024",
+    date: "Dec.2023",
     category: "Portfolio",
-    type: "Design & Dev",
+    type: "Ai & Dev",
     description: "AI-powered healthcare platform designed to streamline patient care by integrating real-time health monitoring and virtual assistance.",
     skills: ["Next.js", "Tailwind CSS", "Shadcn", "Framer Motion", "Hume AI", "Groq", "Joe", "Mama"],
-    imageUrl: "Architecture of the Gollins Melvin Ward Partnership - 1974.jpg",
+    imageUrl: "./DataMining.jpg",
     alt:"Joe",
     projectUrl: "https://healora.com",
     githubUrl: "https://github.com/yourusername/healora"
@@ -21,7 +21,7 @@ export const projectDetails = {
     type: "Design & Dev",
     description: "AI-powered healthcare platform designed to streamline patient care by integrating real-time health monitoring and virtual assistance.",
     skills: ["Next.js", "Tailwind CSS", "Shadcn", "Framer Motion", "Hume AI", "Groq", "Joe", "Mama"],
-    imageUrl: "Architecture of the Gollins Melvin Ward Partnership - 1974.jpg",
+    imageUrl: "./Diabetes.jpg",
     alt:"Joe",
     projectUrl: "https://healora.com",
     githubUrl: "https://github.com/yourusername/healora"
