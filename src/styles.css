@@ -208,16 +208,19 @@ body {
 .mobile-menu {
   display: none;
   position: absolute;
-  top: 60px; /* Height of the nav bar */
+  /* top: 60px; Height of the nav bar */
   top: 3.8rem;
   left: 0;
   right: 0;
   bottom: 0; /* Make it extend to the bottom of the viewport */
   background-color: #000;
-  z-index: 1001;
-  padding: 1rem;
+  z-index: 999;
+  padding: 3rem;
+
+
+  margin: -1.5rem; /* Cheap way of blacking out the bg */
   /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
-  overflow-y: auto; /* Add scrolling if content is too long */
+  /* overflow-y: auto; Add scrolling if content is too long */
 }
 
 .mobile-menu ul {
@@ -236,13 +239,14 @@ body {
   border: none;
   color: #fff;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 5rem;
   display: block;
   padding: 0.5rem 0;
   width: 100%;
   text-align: left;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition-timing-function: ease-in;
+  transition: 0.3s;
 }
 
 .mobile-nav-brand {
