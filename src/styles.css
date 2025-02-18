@@ -232,7 +232,11 @@ body {
   font-size: 1.2rem;
   line-height: 1.6;
   text-align: left;
+  max-height: 80vh; /* Adjust based on preference */
+  overflow-y: auto; /* Enables vertical scrolling */
+  padding-right: 10px; /* Adds space for scrollbar */
 }
+
 
 .about-content p {
   margin-bottom: 1rem;
@@ -249,6 +253,9 @@ body {
   font-size: 1.2rem;
   line-height: 1.6;
   text-align: left;
+  max-height: 80vh; /* Adjust based on preference */
+  overflow-y: auto; /* Enables vertical scrolling */
+  padding-right: 10px; /* Adds space for scrollbar */
 }
 
 /* Add this to your existing styles.css */
