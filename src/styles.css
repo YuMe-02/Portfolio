@@ -618,6 +618,11 @@ body {
     display: none;
   }
 
+  .content-container {
+    width: 90%; /* Increase from 80% */
+    max-width: 90vw; /* More space for content */
+  }
+
   .projects-menu {
     width: 80%;
     right: -35%;
@@ -630,6 +635,13 @@ body {
   
   .content-container {
     padding: 0 3vw;
+  }
+
+  .inspo-content {
+    .content-container {
+      width: 90%; /* Increase from 80% */
+      max-width: 90vw; /* More space for content */
+    }
   }
 
   .projects-grid {
