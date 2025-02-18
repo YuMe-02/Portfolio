@@ -1,5 +1,6 @@
 // projectsData.js
 export const projectDetails = {
+
   customerChurn: {
     id: "customerChurn",
     title: "AI Customer Churn",
@@ -31,11 +32,11 @@ export const projectDetails = {
       date: "Feb.2024",
       category: "Portfolio",
       type: "Dev",
-      description: "Digital learning platform focusing on interactive educational experiences.",
-      skills: ["React", "Node.js", "MongoDB", "WebGL"],
+      description: "A fully functional smart IoT solution for water usage monitoring. The architecture utilizes Flask  for the backend REST API development and React for a responsive front-end interface, resulting in a system capable of tracking water consumption for 1000+ households in real-time. It features a centralized hub network architecture and JWT authentication ensuring secure data transfer.",
+      skills: ["Swift", "Python", "C++", "Docker", "HTML", "Full-Stack", "Flask", "PostgreSQL"],
       imageUrl: "./Hydro.jpg",
-      projectUrl: "https://emuni.edu",
-      githubUrl: "https://github.com/yourusername/emuni"
+      projectUrl: "https://csspp.engineering.ucsc.edu/capstone/hydroconnect/",
+      githubUrl: "https://github.com/YuMe-02/Hydroconnect"
     },
   Proxy: {
       id: "Proxy",
@@ -43,12 +44,25 @@ export const projectDetails = {
       date: "Feb.2024",
       category: "Portfolio",
       type: "Dev",
-      description: "Digital learning platform focusing on interactive educational experiences.",
-      skills: ["React", "Node.js", "MongoDB", "WebGL"],
+      description: "This is a a high-performance and secure HTTPS proxy server, handling concurrent connections for 50+ clients, by implementing multi-threaded architecture and efficient socket programming in C. It features g full SSL/TLS encryption, which ensures data privacy and integrity in network communications.",
+      skills: ["C", "Makefile"],
       imageUrl: "./Proxy.jpeg",
       projectUrl: "https://emuni.edu",
-      githubUrl: "https://github.com/yourusername/emuni"
+      githubUrl: "https://github.com/YuMe-02/WebProxy"
+    },
+    Portfolio: {
+      id: "Proxy",
+      title: "Portfolio",
+      date: "Jan.2025",
+      category: "Portfolio",
+      type: "Dev",
+      description: "This is a a high-performance and secure HTTPS proxy server, handling concurrent connections for 50+ clients, by implementing multi-threaded architecture and efficient socket programming in C. It features g full SSL/TLS encryption, which ensures data privacy and integrity in network communications.",
+      skills: ["C", "Makefile"],
+      imageUrl: "./Proxy.jpeg",
+      projectUrl: "https://emuni.edu",
+      githubUrl: "https://github.com/YuMe-02/WebProxy"
     }
+
 };
 
 
