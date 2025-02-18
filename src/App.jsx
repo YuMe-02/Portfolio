@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import About from './components/About';
 import Menu from './components/Menu';
+import MobileNav from './components/MobileNav';
 import Viewfinder from './components/Viewfinder';
 import Inspo from './components/Inspo';
 import ProjectCard from './components/ProjectCard';
@@ -14,12 +15,10 @@ const App = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  // Add resize listener with enhanced logic
   useEffect(() => {
     const handleResize = () => {
       const newIsMobile = window.innerWidth < 768;
       
-      // If transitioning from mobile to desktop while viewing a project
       if (isMobile && !newIsMobile && activeComponent === 'project-detail') {
         setActiveComponent('projects');
       }
@@ -76,6 +75,10 @@ const App = () => {
       <div className="corner-border corner-bottom-left"></div>
       <div className="corner-border corner-bottom-right"></div>
       
+      <MobileNav 
+        onNavigate={handleNavigation} 
+        activeComponent={activeComponent}
+      />
       <Viewfinder />
       <Header />
       <Menu 

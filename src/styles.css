@@ -33,6 +33,7 @@ body {
   border-color: #fff;
   border-style: solid;
   pointer-events: none;
+
 }
 
 .corner-top-left {
@@ -177,7 +178,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-
 /* Recording interface elements */
 .rec-indicator {
   position: absolute;
@@ -188,6 +188,132 @@ body {
   gap: 8px;
   font-size: 12px;
   color: #fff;
+}
+
+/* Mobile Navigation Styles */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: #000;
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 60px; /* Height of the nav bar */
+  top: 3.8rem;
+  left: 0;
+  right: 0;
+  bottom: 0; /* Make it extend to the bottom of the viewport */
+  background-color: #000;
+  z-index: 1001;
+  padding: 1rem;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+  overflow-y: auto; /* Add scrolling if content is too long */
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu ul li {
+  margin: 1rem 0;
+}
+
+
+.mobile-menu-button {
+  background: none;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav-brand {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.mobile-nav-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-nav-toggle:hover {
+  color: #888;
+}
+
+.mobile-menu-button.active {
+  color: #888;
+}
+
+/* Mobile Menu Button Styles */
+.mobile-menu-button {
+  background: none;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mobile-menu-button:hover {
+  color: #888;
+}
+
+.mobile-menu-button.active {
+  color: #888;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu ul li {
+  margin: 1rem 0;
+}
+
+.mobile-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.mobile-menu ul li a:hover {
+  color: #888;
+}
+
+.mobile-menu ul li a.active {
+  color: #888;
 }
 
 .rec-dot {
@@ -416,55 +542,76 @@ body {
 
 @media (max-width: 768px) {
 
-  .header h1 {
-    font-size: 2rem;
+  .mobile-nav {
+    display: flex;
   }
-
-  .header p {
-    font-size: 1.2rem;
+  
+  .mobile-menu {
+    display: block;
   }
-
+  
+  /* Hide the original header and menu when in mobile view */
+  .header {
+    display: none;
+  }
+  
   .menu {
-    left: 5%;
+    display: none;
+  }
+  
+  /* Adjust content container to account for mobile nav */
+  .content-container {
+    margin-top: 2rem;
   }
 
-  .menu ul li a {
-    font-size: 1.2rem;
+  /* Adjust container padding for mobile */
+  .container {
+    padding-top: 0px;
+  }
+
+  .corner-top-left {
+    top: 0;
+    left: 0;
+    transform: translateY(3rem);
+  }
+  
+  .corner-top-right {
+    top: 0;
+    right: 0;
+    transform: translateY(3rem);
+  }
+  
+  .corner-bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: translateY(1.5rem);
+  }
+  
+  .corner-bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: translateY(1.5rem);
   }
 
   .rec-indicator {
-
-    font-size: 12px;
-
+    display: none;
   }
   
   .rec-dot {
-    width: 8px;
-    height: 8px;
-    background-color: #ff0000;
-
+    display: none;
   }
   
   .timer {
-
-    font-size: 12px;
-    font-family: monospace;
-
+    display: none;
   }
   
   /* Location styles */
   .location {
-
-    font-size: 12px;
-    font-family: monospace;
-
+    display: none;
   }
   
   .quality {
-
-    font-size: 12px;
-    font-family: monospace;
-
+    display: none;
   }
 
   .projects-menu {
