@@ -50,15 +50,15 @@ export const projectDetails = {
       projectUrl: "https://emuni.edu",
       githubUrl: "https://github.com/YuMe-02/WebProxy"
     },
-    Portfolio: {
-      id: "Proxy",
+  Portfolio: {
+      id: "Portfolio",
       title: "Portfolio",
       date: "Jan.2025",
       category: "Portfolio",
       type: "Dev",
       description: "This is a a high-performance and secure HTTPS proxy server, handling concurrent connections for 50+ clients, by implementing multi-threaded architecture and efficient socket programming in C. It features g full SSL/TLS encryption, which ensures data privacy and integrity in network communications.",
       skills: ["C", "Makefile"],
-      imageUrl: "./Proxy.jpeg",
+      imageUrl: "./Portfolio.jpg",
       projectUrl: "https://emuni.edu",
       githubUrl: "https://github.com/YuMe-02/WebProxy"
     }
