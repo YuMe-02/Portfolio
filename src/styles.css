@@ -103,6 +103,14 @@ body {
   fill: white;
 }
 
+.icons svg:hover{
+  transition-timing-function: ease-in;
+  transition: 0.2s;
+  width: 36px;
+  height: 36px;
+
+}
+
 /* Content Container for Animations */
 .content-container {
   position: absolute;
@@ -149,6 +157,8 @@ body {
 .menu ul li a:hover {
   color: #888;
   font-size: 1.8rem;
+  transition-timing-function: ease-in;
+  transition: 0.2s;
 }
 
 .menu ul li a.active {
@@ -256,6 +266,8 @@ body {
 .projects-menu :hover{
   color: #888;
   font-size: 2.2rem;
+  transition-timing-function: ease-in;
+  transition: 0.3s;
 }
 
 .projects-menu h2 {
@@ -412,6 +424,42 @@ body {
   .menu ul li a {
     font-size: 1.2rem;
   }
+
+  .rec-indicator {
+
+    font-size: 12px;
+
+  }
+  
+  .rec-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ff0000;
+
+  }
+  
+  .timer {
+
+    font-size: 12px;
+    font-family: monospace;
+
+  }
+  
+  /* Location styles */
+  .location {
+
+    font-size: 12px;
+    font-family: monospace;
+
+  }
+  
+  .quality {
+
+    font-size: 12px;
+    font-family: monospace;
+
+  }
+
   .projects-menu {
     width: 80%;
     right: -35%;

@@ -8,7 +8,7 @@ export const projectDetails = {
     type: "Ai & Dev",
     description: "AI-powered healthcare platform designed to streamline patient care by integrating real-time health monitoring and virtual assistance.",
     skills: ["Next.js", "Tailwind CSS", "Shadcn", "Framer Motion", "Hume AI", "Groq", "Joe", "Mama"],
-    imageUrl: "./DataMining.jpg",
+    imageUrl: "./DataMining.png",
     alt:"Joe",
     projectUrl: "https://healora.com",
     githubUrl: "https://github.com/yourusername/healora"
