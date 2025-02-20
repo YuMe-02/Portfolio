@@ -205,25 +205,30 @@ body {
   /* padding: 5rem; */  
   overflow: auto;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
 }
 
+
+
 .mobile-menu {
-  display: none;
-  position: absolute;
-  /* top: 60px; Height of the nav bar */
-  top: 3.8rem;
+  position: fixed;
+  top: 3rem; /* Adjust based on your header height */
   left: 0;
-  right: 0;
-  bottom: 0; /* Make it extend to the bottom of the viewport */
-  background-color: #000;
-  z-index: 999;
+  width: 100%;
+  background-color: black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  z-index: 100;
   padding: 3rem;
+  margin: -1rem; /* Cheap way of blacking out the bg */
+}
 
-
-  margin: -1.5rem; /* Cheap way of blacking out the bg */
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
-  /* overflow-y: auto; Add scrolling if content is too long */
+/* When menu is open */
+.mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  height: calc(100vh - 3rem); /* Full viewport height minus header */
 }
 
 .mobile-menu ul {

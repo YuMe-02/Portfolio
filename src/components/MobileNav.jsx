@@ -24,44 +24,20 @@ const MobileNav = ({ onNavigate, activeComponent }) => {
         </button>
       </nav>
 
-      {isMenuOpen && (
-        <div className="mobile-menu">
-          <ul>
-            <li>
+      <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
+        <ul>
+          {['home', 'about', 'projects', 'inspiration'].map((item) => (
+            <li key={item}>
               <button 
-                onClick={() => handleNavClick('home')}
-                className={`mobile-menu-button ${activeComponent === 'home' ? 'active' : ''}`}
+                onClick={() => handleNavClick(item)}
+                className={`mobile-menu-button ${activeComponent === item ? 'active' : ''}`}
               >
-                Home
+                {item.charAt(0).toUpperCase() + item.slice(1)}
               </button>
             </li>
-            <li>
-              <button 
-                onClick={() => handleNavClick('about')}
-                className={`mobile-menu-button ${activeComponent === 'about' ? 'active' : ''}`}
-              >
-                About
-              </button>
-            </li>
-            <li>
-              <button 
-                onClick={() => handleNavClick('projects')}
-                className={`mobile-menu-button ${activeComponent === 'projects' ? 'active' : ''}`}
-              >
-                Projects
-              </button>
-            </li>
-            <li>
-              <button 
-                onClick={() => handleNavClick('inspiration')}
-                className={`mobile-menu-button ${activeComponent === 'inspiration' ? 'active' : ''}`}
-              >
-                Inspiration
-              </button>
-            </li>
-          </ul>
-        </div>
-      )}
+          ))}
+        </ul>
+      </div>
     </>
   );
 };
