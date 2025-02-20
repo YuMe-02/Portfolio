@@ -7,7 +7,7 @@ export const projectDetails = {
     date: "Dec.2023",
     category: "Portfolio",
     type: "Ai & Dev",
-    description: "",
+    description: "AI-powered case study designed to explore customer segments of a simulated mobile phone career. This includes a series of reports and justifcations for certain customer behavior and attempts to identify and rectify customer pain points through analytics based business solutions.",
     skills: ["Jupyter Notebooks", "Python", "Matplotlib", "Pandas"],
     imageUrl: "./DataMining.png",
     alt:"Joe",
