@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import About from './components/About';
 import Menu from './components/Menu';
@@ -9,18 +10,20 @@ import ProjectCard from './components/ProjectCard';
 import ProjectMenu from './components/ProjectMenu';
 import { projectDetails } from './components/ProjectsData';
 
-const App = () => {
-  const [activeComponent, setActiveComponent] = useState('about');
+// Wrapper component to handle navigation logic
+const AppContent = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
       const newIsMobile = window.innerWidth < 768;
       
-      if (isMobile && !newIsMobile && activeComponent === 'project-detail') {
-        setActiveComponent('projects');
+      if (isMobile && !newIsMobile && location.pathname === '/project-detail') {
+        navigate('/projects');
       }
       
       setIsMobile(newIsMobile);
@@ -28,14 +31,14 @@ const App = () => {
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [isMobile, activeComponent]);
+  }, [isMobile, location.pathname, navigate]);
 
-  const handleNavigation = (component) => {
-    if (component !== activeComponent && !isAnimating) {
+  const handleNavigation = (path) => {
+    if (path !== location.pathname.slice(1) && !isAnimating) {
       setIsAnimating(true);
       setSelectedProject(null);
       setTimeout(() => {
-        setActiveComponent(component);
+        navigate(`/${path}`);
         setTimeout(() => {
           setIsAnimating(false);
         }, 500);
@@ -49,7 +52,7 @@ const App = () => {
       const project = projectDetails[projectId];
       setSelectedProject(project);
       if (isMobile) {
-        setActiveComponent('project-detail');
+        navigate('/project-detail');
       }
       setTimeout(() => {
         setIsAnimating(false);
@@ -61,7 +64,7 @@ const App = () => {
     setIsAnimating(true);
     setTimeout(() => {
       setSelectedProject(null);
-      setActiveComponent('projects');
+      navigate('/projects');
       setTimeout(() => {
         setIsAnimating(false);
       }, 500);
@@ -77,46 +80,63 @@ const App = () => {
       
       <MobileNav 
         onNavigate={handleNavigation} 
-        activeComponent={activeComponent}
+        activeComponent={location.pathname.slice(1) || 'home'}
       />
       <Viewfinder />
       <Header />
       <Menu 
         onNavigate={handleNavigation} 
-        activeComponent={activeComponent} 
+        activeComponent={location.pathname.slice(1) || 'home'}
       />
       
       <div className={`content-container ${isAnimating ? 'fade-out' : 'fade-in'}`}>
-        {activeComponent === 'home' && (
-          <div className="home-content">
-            <h2>Welcome</h2>
-          </div>
-        )}
-        {activeComponent === 'about' && <About />}
-        {activeComponent === 'projects' && (
-          <div className="projects-layout">
-            <ProjectMenu onProjectClick={handleProjectClick} />
-            {selectedProject && !isMobile && (
-              <div className="project-detail desktop">
+        <Routes>
+          <Route path="/" element={
+            <div className="home-content">
+              <h2>Welcome</h2>
+            </div>
+          } />
+          <Route path="/home" element={
+            <div className="home-content">
+              <h2>Welcome</h2>
+            </div>
+          } />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={
+            <div className="projects-layout">
+              <ProjectMenu onProjectClick={handleProjectClick} />
+              {selectedProject && !isMobile && (
+                <div className="project-detail desktop">
+                  <ProjectCard {...selectedProject} />
+                </div>
+              )}
+            </div>
+          } />
+          <Route path="/project-detail" element={
+            selectedProject && isMobile && (
+              <div className="project-detail mobile">
+                <button 
+                  onClick={handleBackToProjects}
+                  className="mb-8 text-sm hover:opacity-70 transition-opacity"
+                >
+                  ← Back to Projects
+                </button>
                 <ProjectCard {...selectedProject} />
               </div>
-            )}
-          </div>
-        )}
-        {activeComponent === 'project-detail' && selectedProject && isMobile && (
-          <div className="project-detail mobile">
-            <button 
-              onClick={handleBackToProjects}
-              className="mb-8 text-sm hover:opacity-70 transition-opacity"
-            >
-              ← Back to Projects
-            </button>
-            <ProjectCard {...selectedProject} />
-          </div>
-        )}
-        {activeComponent === 'inspiration' && <Inspo />}
+            )
+          } />
+          <Route path="/inspiration" element={<Inspo />} />
+        </Routes>
       </div>
     </div>
+  );
+};
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <AppContent />
+    </BrowserRouter>
   );
 };
 

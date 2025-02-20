@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Menu = ({ onNavigate, activeComponent }) => {
   return (
     <nav className="menu">
       <ul>
         <li>
-          <a 
-            href="#" 
+          <Link
+            to="/home"
             onClick={(e) => {
               e.preventDefault();
               onNavigate('home');
@@ -14,11 +15,11 @@ const Menu = ({ onNavigate, activeComponent }) => {
             className={activeComponent === 'home' ? 'active' : ''}
           >
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a 
-            href="#" 
+          <Link
+            to="/about"
             onClick={(e) => {
               e.preventDefault();
               onNavigate('about');
@@ -26,11 +27,11 @@ const Menu = ({ onNavigate, activeComponent }) => {
             className={activeComponent === 'about' ? 'active' : ''}
           >
             About
-          </a>
+          </Link>
         </li>
         <li>
-          <a 
-            href="#" 
+          <Link
+            to="/projects"
             onClick={(e) => {
               e.preventDefault();
               onNavigate('projects');
@@ -38,11 +39,11 @@ const Menu = ({ onNavigate, activeComponent }) => {
             className={activeComponent === 'projects' ? 'active' : ''}
           >
             Projects
-          </a>
+          </Link>
         </li>
         <li>
-          <a 
-            href="#" 
+          <Link
+            to="/inspiration"
             onClick={(e) => {
               e.preventDefault();
               onNavigate('inspiration');
@@ -50,7 +51,7 @@ const Menu = ({ onNavigate, activeComponent }) => {
             className={activeComponent === 'inspiration' ? 'active' : ''}
           >
             Inspiration
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
