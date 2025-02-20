@@ -488,6 +488,26 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Target the back button using existing classes */
+.project-detail.mobile button.mb-8.text-sm {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  background-color: transparent;
+  border-color: transparent;
+  padding: .8rem 1.6re,;
+  border-radius: .5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-detail.mobile button.mb-8.text-sm:hover {
+  background-color: transparent;
+  transform: translateY(-2px);
+  font-size: 1.5rem
+}
+
+
+
 /* Skills Container */
 .skills-container {
   background-color: rgba(255, 255, 255, 0.05);

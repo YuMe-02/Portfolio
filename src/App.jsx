@@ -119,7 +119,7 @@ const AppContent = () => {
                   onClick={handleBackToProjects}
                   className="mb-8 text-sm hover:opacity-70 transition-opacity"
                 >
-                  ← Back to Projects
+                  ← BACK TO PROJECTS
                 </button>
                 <ProjectCard {...selectedProject} />
               </div>
