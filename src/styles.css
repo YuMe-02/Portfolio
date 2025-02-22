@@ -476,7 +476,7 @@ body {
 }
 
 .project-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #fff;
   margin-bottom: 0.5rem;
 }
@@ -492,21 +492,21 @@ body {
 .project-detail.mobile button.mb-8.text-sm {
   color: white;
   font-size: 1.3rem;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
   font-weight: bolder;
   background-color: transparent;
   border-color: transparent;
   padding: .8rem 1.6re,;
-  border-radius: .5rem;
+  border-radius: 1.5rem;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .project-detail.mobile button.mb-8.text-sm:hover {
   background-color: transparent;
   transform: translateY(-2px);
-  font-size: 1.5rem
+  font-size: 1rem
 }
-
-
 
 /* Skills Container */
 .skills-container {
@@ -647,7 +647,7 @@ body {
   }
 
   .projects-menu {
-    width: 80%;
+    width: 100%;
     right: -35%;
     transform: translateY(-50%);
   }
@@ -656,13 +656,17 @@ body {
     right: 0%;  /* Match container padding */
   }
 
+  .project-content {
+    padding: 1.5rem;
+  }
+
   .container {
     padding: 3vh 3vw;  /* Smaller padding on mobile */
   }
 
   .content-container {
-    width: 90%; /* Increase from 80% */
-    max-width: 90vw; /* More space for content */
+    width: 100%; /* Increase from 80% */
+    max-width: 90vh; /* More space for content */
     padding: 0 3vw;
     margin-top: 7%;
     /* left: 50%;

@@ -33,7 +33,7 @@ export const projectDetails = {
       category: "Portfolio",
       type: "Dev",
       description: "A fully functional smart IoT solution for water usage monitoring. The architecture utilizes Flask  for the backend REST API development and React for a responsive front-end interface, resulting in a system capable of tracking water consumption for 1000+ households in real-time. It features a centralized hub network architecture and JWT authentication ensuring secure data transfer.",
-      skills: ["Swift", "Python", "C++", "Docker", "HTML", "Full-Stack", "Flask", "PostgreSQL"],
+      skills: ["Swift", "Python", "C++", "Docker", "HTML", "Flask", "PostgreSQL"],
       imageUrl: "./Hydro.jpg",
       projectUrl: "https://csspp.engineering.ucsc.edu/capstone/hydroconnect/",
       githubUrl: "https://github.com/YuMe-02/Hydroconnect"
