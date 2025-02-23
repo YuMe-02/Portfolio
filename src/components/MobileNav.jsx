@@ -26,7 +26,7 @@ const MobileNav = ({ onNavigate, activeComponent }) => {
 
       <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
         <ul>
-          {['home', 'about', 'projects', 'inspiration'].map((item) => (
+          {[ 'home', 'about', 'projects', 'inspiration'].map((item) => (
             <li key={item}>
               <button 
                 onClick={() => handleNavClick(item)}

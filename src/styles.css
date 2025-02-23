@@ -365,20 +365,33 @@ body {
 }
 
 /* About styles */
-.about-content {
+.about-heading {
+  font-size: 1.5rem;
+}
+
+.about-container {
+  display: flex;
   color: #fff;
   font-size: 1.2rem;
   line-height: 1.6;
-  text-align: left;
+  /* text-align: left; */
   max-height: 80vh; /* Adjust based on preference */
+  max-width: 90vw;
   overflow-y: auto; /* Enables vertical scrolling */
-  padding-right: 10px; /* Adds space for scrollbar */
+  padding-right: 2rem;
 }
 
+.about-content img {
+  width: 100%;
+  height: auto;
+  display: block; /* Prevents extra spacing below the image */
+  object-fit: contain; /* Ensures the whole image fits without cropping */
+}
 
 .about-content p {
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  margin-left: 2rem;
+  font-size: 1.3rem;
 }
 
 .about-content p:last-child {
@@ -644,6 +657,10 @@ body {
   
   .quality {
     display: none;
+  }
+
+  .about-heading {
+    font-size: 1rem;
   }
 
   .projects-menu {
