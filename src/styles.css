@@ -659,8 +659,26 @@ body {
     display: none;
   }
 
-  .about-heading {
-    font-size: 1rem;
+  .about-container img{
+    display: none;
+  }
+
+  .about-container{
+    display: grid;
+    padding: 0%;
+  }
+
+  .about-heading h1 {
+    font-size: 2rem;
+    padding-left: 2rem;
+  }
+
+  .about-content p {
+    margin-left: 1rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-bottom: 1rem;
+
   }
 
   .projects-menu {
