@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
 body {
   background-color: #000;
   color: #fff;
@@ -202,14 +206,13 @@ body {
   z-index: 1000;
   justify-content: space-between;
   align-items: center;
-  /* padding: 5rem; */  
   overflow: auto;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .mobile-menu {
   position: fixed;
-  top: 3rem; /* Adjust based on your header height */
+  top: 2rem;
   left: 0;
   width: 100%;
   background-color: black;
@@ -219,85 +222,14 @@ body {
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
   z-index: 100;
   padding: 3rem;
-  margin: 0rem; /* Cheap way of blacking out the bg */
+  margin: 0rem;
 }
 
 /* When menu is open */
 .mobile-menu.open {
   transform: translateY(0);
   opacity: 1;
-  height: calc(100vh - 3rem); /* Full viewport height minus header */
-}
-
-.mobile-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.mobile-menu ul li {
-  margin: 1rem 0;
-}
-
-
-.mobile-menu-button {
-  background: none;
-  border: none;
-  color: #fff;
-  text-decoration: none;
-  font-size: 5rem;
-  display: block;
-  padding: 0.5rem 0;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  transition-timing-function: ease-in;
-  transition: 0.3s;
-}
-
-.mobile-nav-brand {
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: normal;
-}
-
-.mobile-nav-toggle {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-  /* padding: 0.5rem; */
-}
-
-.mobile-nav-toggle:hover {
-  color: #888;
-}
-
-.mobile-menu-button.active {
-  color: #888;
-}
-
-/* Mobile Menu Button Styles */
-.mobile-menu-button {
-  background: none;
-  border: none;
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2rem;
-  display: block;
-  padding: 0.5rem 0;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-}
-
-.mobile-menu-button:hover {
-  color: #888;
-}
-
-.mobile-menu-button.active {
-  color: #888;
+  height: calc(100vh - 3rem);
 }
 
 .mobile-menu ul {
@@ -313,7 +245,7 @@ body {
 .mobile-menu ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 2rem;
   display: block;
   padding: 0.5rem 0;
 }
@@ -323,6 +255,47 @@ body {
 }
 
 .mobile-menu ul li a.active {
+  color: #888;
+}
+
+.mobile-menu-button {
+  background: none;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  display: block;
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition-timing-function: ease-in;
+  transition: 0.3s;
+}
+
+.mobile-menu-button:hover {
+  color: #888;
+}
+
+.mobile-menu-button.active {
+  color: #888;
+}
+
+.mobile-nav-brand {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.mobile-nav-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.mobile-nav-toggle:hover {
   color: #888;
 }
 
@@ -407,100 +380,98 @@ body {
   padding-right: 10px; /* Adds space for scrollbar */
 }
 
-/* Add this to your existing styles.css */
 .projects-menu {
   position: absolute;
   top: 50%;
-  right: -38%;  /* Match container padding */
+  right: -38%;
   transform: translateY(-50%);
   text-align: right;
   background-color: transparent;
-  width: 40%;  /* Control width relative to container */
-  /* max-width: 15rem;  /* Prevent excessive width on large screens */
-}
-
-.projects-menu :hover{
+  width: 40%; 
+  max-width: 15rem; /* Prevent excessive width on large screens */
+  }
+  
+  .projects-menu :hover{
   color: #888;
   font-size: 2.2rem;
   transition-timing-function: ease-in;
   transition: 0.3s;
-}
-
-.projects-menu h2 {
+  }
+  
+  .projects-menu h2 {
   font-size: 2rem;
   font-weight: normal;
   margin-top: .5rem;
   transition: opacity 0.3s ease;
-}
-
-
-.projects-menu .group {
+  }
+  
+  .projects-menu .group {
   margin-bottom: 2rem;
-}
-
-.projects-menu .group:hover h2 {
+  }
+  
+  .projects-menu .group:hover h2 {
   opacity: 0.7;
-}
-
-.projects-menu .group:active h2 {
+  }
+  
+  .projects-menu .group:active h2 {
   font-size: 3rem;
   color: #fff;
   transition: font-size 0.3s;
-}
-
-.projects-menu .text-sm {
+  }
+  
+  .projects-menu .text-sm {
   font-size: 0.875rem;
   color: #bbb;
-}
- 
-.projects-grid {
+  }
+  
+  .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
   gap: 2rem;
   width: 100%;
   padding: 1rem;
-}
-
-/* Project Card */
-.project-card {
+  }
+  
+  /* Project Card */
+  .project-card {
   background-color: #000;
   border: 1px solid rgba(255, 255, 255, 0.1 );
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease;
-}
-
-.project-card:hover {
+  }
+  
+  .project-card:hover {
   transform: translateY(-5px);
-}
-
-.project-image {
+  }
+  
+  .project-image {
   width: 100%;
   height: auto;
   object-fit: cover;
   background-position: center center;
   background-repeat: no-repeat;
-}
-
-.project-content {
+  }
+  
+  .project-content {
   padding: 1.5rem;
-}
-
-.project-title {
+  }
+  
+  .project-title {
   font-size: 2rem;
   color: #fff;
   margin-bottom: 0.5rem;
-}
-
-.project-description {
+  }
+  
+  .project-description {
   color: #bbb;
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
-}
-
-/* Target the back button using existing classes */
-.project-detail.mobile button.mb-8.text-sm {
+  }
+  
+  /* Target the back button using existing classes */
+  .project-detail.mobile button.mb-8.text-sm {
   color: white;
   font-size: 1.3rem;
   padding-left: 1rem;
@@ -511,13 +482,21 @@ body {
   padding: .8rem 1.6re,;
   border-radius: 1.5rem;
   transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.project-detail.mobile button.mb-8.text-sm:hover {
+  }
+  
+  .project-detail.mobile button.mb-8.text-sm:hover {
   background-color: transparent;
   transform: translateY(-2px);
   font-size: 1rem
-}
+  }
+  
+  /* Skills Container */
+  .skills-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  }
 
 /* Skills Container */
 .skills-container {
@@ -648,16 +627,34 @@ body {
     display: none;
   }
   
+  .content-container {
+    width: 100%;
+    max-width: 90vh;
+    padding: 0 3vw;
+    margin-top: 3rem;
+    height: calc(100vh - 6rem);
+    overflow-y: auto;
+  }
+
+  .container {
+    width: 90vw;
+    height: 90vh;
+    position: relative;
+    margin: 0 auto;
+    padding: 5vh 5vw;
+    box-sizing: border-box;
+  }
+
   .corner-top-left {
     top: 0;
     left: 0;
-    transform: translateY(3rem);
+    transform: translateY(2.5rem);
   }
   
   .corner-top-right {
     top: 0;
     right: 0;
-    transform: translateY(3rem);
+    transform: translateY(2.5rem);
   }
   
   .corner-bottom-left {
