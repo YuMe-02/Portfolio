@@ -207,8 +207,6 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-
-
 .mobile-menu {
   position: fixed;
   top: 3rem; /* Adjust based on your header height */
@@ -373,8 +371,9 @@ body {
   display: flex;
   color: #fff;
   font-size: 1.2rem;
-  line-height: 1.6;
+  line-height: 1.6rem;
   /* text-align: left; */
+  flex-direction: row;
   max-height: 80vh; /* Adjust based on preference */
   max-width: 90vw;
   overflow-y: auto; /* Enables vertical scrolling */
@@ -383,9 +382,9 @@ body {
 
 .about-content img {
   width: 100%;
-  height: auto;
-  display: block; /* Prevents extra spacing below the image */
-  object-fit: contain; /* Ensures the whole image fits without cropping */
+  height: auto; /* Maintains aspect ratio */
+  /* max-width: 600px; Optional limit */
+  object-fit: contain; /* Ensures full image is visible */
 }
 
 .about-content p {
@@ -584,6 +583,53 @@ body {
   text-align: left;
 }
 
+/* NEW ADDITIONS - Responsive About Section */
+/* About section styles */
+.about-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-heading h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  max-height: 70vh;
+  overflow: hidden;
+}
+
+.about-image-container {
+  flex: 0 0 auto;
+  width: 30%;
+  max-width: 300px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.about-image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.about-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
 
 @media (max-width: 768px) {
 
@@ -660,7 +706,7 @@ body {
   }
 
   .about-container img{
-    display: none;
+    /* display: none; */
   }
 
   .about-container{
@@ -678,7 +724,6 @@ body {
     padding-left: 1.2rem;
     padding-right: 1.2rem;
     padding-bottom: 1rem;
-
   }
 
   .projects-menu {
@@ -711,5 +756,37 @@ body {
 
   .projects-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  /* NEW ADDITIONS FOR RESPONSIVE ABOUT - MOBILE */
+  .about-container {
+    flex-direction: column;
+    max-height: none;
+    overflow: visible;
+  }
+  
+  .about-image-container {
+    width: 60%;
+    max-width: 200px;
+    margin: 0 auto 1.5rem;
+  }
+  
+  .about-content {
+    padding: 0 1rem;
+  }
+  
+  .about-heading h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-image-container {
+    width: 80%;
+  }
+  
+  .about-content p {
+    font-size: 1.1rem;
   }
 }
