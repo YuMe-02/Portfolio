@@ -219,7 +219,7 @@ body {
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
   z-index: 100;
   padding: 3rem;
-  margin: -1rem; /* Cheap way of blacking out the bg */
+  margin: 0rem; /* Cheap way of blacking out the bg */
 }
 
 /* When menu is open */
@@ -267,7 +267,7 @@ body {
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
 }
 
 .mobile-nav-toggle:hover {
@@ -383,7 +383,6 @@ body {
 .about-content img {
   width: 100%;
   height: auto; /* Maintains aspect ratio */
-  /* max-width: 600px; Optional limit */
   object-fit: contain; /* Ensures full image is visible */
 }
 
@@ -632,7 +631,7 @@ body {
 }
 
 @media (max-width: 768px) {
-
+  /* Keep your existing mobile rules */
   .mobile-nav {
     display: flex;
   }
@@ -641,7 +640,6 @@ body {
     display: block;
   }
   
-  /* Hide the original header and menu when in mobile view */
   .header {
     display: none;
   }
@@ -650,16 +648,6 @@ body {
     display: none;
   }
   
-  /* Adjust content container to account for mobile nav */
-  .content-container {
-    margin-top: 2rem;
-  }
-
-  /* Adjust container padding for mobile */
-  .container {
-    padding-top: 0px;
-  }
-
   .corner-top-left {
     top: 0;
     left: 0;
@@ -684,109 +672,74 @@ body {
     transform: translateY(1.5rem);
   }
 
-  .rec-indicator {
-    display: none;
-  }
-  
-  .rec-dot {
-    display: none;
-  }
-  
-  .timer {
-    display: none;
-  }
-  
-  /* Location styles */
-  .location {
-    display: none;
-  }
-  
-  .quality {
+  .rec-indicator, .rec-dot, .timer, .location, .quality {
     display: none;
   }
 
-  .about-container img{
-    /* display: none; */
-  }
-
-  .about-container{
-    display: grid;
-    padding: 0%;
+  /* Update about container styles for mobile */
+  .about-container {
+    flex-direction: column;
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+    padding: 1rem;
+    margin-top: 4rem;
+    -webkit-overflow-scrolling: touch;
   }
 
   .about-heading h1 {
     font-size: 2rem;
-    padding-left: 2rem;
+    margin-bottom: -2rem;
+  }
+  .about-content {
+    padding: 0;
+    overflow-y: visible;
   }
 
   .about-content p {
-    margin-left: 1rem;
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-    padding-bottom: 1rem;
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
   }
 
+  .about-image-container {
+    width: 60%;
+    max-width: 200px;
+    margin: auto;
+    padding-top: 1rem;
+  }
+
+  /* Keep your existing mobile styles for projects */
   .projects-menu {
     width: 100%;
-    right: -35%;
-    transform: translateY(-50%);
-  }
-  
-  .projects-menu {
-    right: 0%;  /* Match container padding */
+    right: 0%;
   }
 
   .project-content {
     padding: 1.5rem;
   }
 
-  .container {
-    padding: 3vh 3vw;  /* Smaller padding on mobile */
-  }
-
-  .content-container {
-    width: 100%; /* Increase from 80% */
-    max-width: 90vh; /* More space for content */
-    padding: 0 3vw;
-    margin-top: 7%;
-    /* left: 50%;
-    right: 50% */
-  }
-
-
   .projects-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
-  
-  /* NEW ADDITIONS FOR RESPONSIVE ABOUT - MOBILE */
-  .about-container {
-    flex-direction: column;
-    max-height: none;
-    overflow: visible;
-  }
-  
-  .about-image-container {
-    width: 60%;
-    max-width: 200px;
-    margin: 0 auto 1.5rem;
-  }
-  
-  .about-content {
-    padding: 0 1rem;
-  }
-  
-  .about-heading h1 {
-    font-size: 2rem;
-    text-align: center;
-  }
 }
 
+/* Add new media query for smaller devices */
 @media (max-width: 480px) {
+  .about-container {
+    padding: 0.5rem;
+    margin-top: 3rem;
+  }
+
+  .content-container {
+    margin-top: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
   .about-image-container {
     width: 80%;
-  }
-  
-  .about-content p {
-    font-size: 1.1rem;
   }
 }
