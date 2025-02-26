@@ -4,15 +4,11 @@ const Header = () => {
   return (
     <header className="header">
       <h1>Darren Yu</h1>
-      {/* <h2 style={{ marginBottom: "12px" }}>Developer & Designer</h2> */}
 
       <p style={{ marginBottom: "12px", fontSize: "1.5rem" }}>
         Developer & Designer
       </p>
       
-      {/* <p style={{ marginBottom: "12px", fontSize: "1rem" }}>
-        Seeking Frontend, Full Stack, or Software Engineering roles.
-      </p> */}
 
       <ul className="icons">
         <li>

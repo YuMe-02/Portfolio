@@ -9,7 +9,7 @@ const About = () => {
 
       <div className="about-container">
         <div className="about-image-container">
-          <img src="pfp.jpg" alt="portrait" />
+          <img src= "pfp.png" alt="portrait" />
         </div>
 
         <div className="about-content">
@@ -29,5 +29,13 @@ const About = () => {
     </div>
   );
 };
+
+// "A subject holds no meaning without its context—its existence is shaped by the world around it."
+
+// https://calendar.ucsc.edu/event/santa_cruz_launchpad_2023
+
+// https://engineering.ucsc.edu/
+
+// https://www.cied.ucsc.edu/launchpad-2024
 
 export default About;
