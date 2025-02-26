@@ -89,6 +89,7 @@ body {
 .icons {
   list-style: none;
   display: flex;
+  
   gap: 15px;
   padding: 0;
   margin: 0;
@@ -563,7 +564,7 @@ body {
   text-align: right;
   background-color: transparent;
   width: 40%; 
-  max-width: 15rem; /* Prevent excessive width on large screens */
+  max-width: 25rem; /* Prevent excessive width on large screens */
   }
   
   .projects-menu :hover{
@@ -956,17 +957,17 @@ body {
   }
 
   .profile-image {
-      width: 220px;
-      height: 220px;
+    width: 220px;
+    height: 220px;
   }
 
   .name {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .info-section {
-      width: 100%;
-      margin-bottom: 1.5rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
   }
 
   .right-panel {
