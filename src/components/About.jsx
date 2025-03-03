@@ -7,7 +7,6 @@ const About = () => {
       <div className="grid-lines">
         <div className="horizontal-line line-top"></div>
         <div className="horizontal-line line-bottom"></div>
-        <div className="vertical-line"></div>
       </div>
       
       

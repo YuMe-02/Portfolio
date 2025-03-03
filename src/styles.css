@@ -768,29 +768,6 @@ body {
   bottom: -0.01rem;
 }
 
-.vertical-line {
-  position: absolute;
-  top: 5.4rem;
-  bottom: 0rem;
-  width: 1px;
-  background-color: white;
-  left: 21.75rem;
-  transform: translateX(-50%);
-}
-
-/* Japanese vertical text */
-/* .japanese-text {
-  position: absolute;
-  right: 50px;
-  top: 25%;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  font-size: 14px;
-  color: #ffffff;
-  letter-spacing: 2px;
-  z-index: 1;
-} */
-
 /* Adjust About section to work with grid lines */
 .about-section {
   position: relative;
@@ -820,13 +797,14 @@ body {
   }
 }
 
-.about-image-container {
-  flex: 0 0 auto;
-  width: 30%;
-  max-width: 300px;
-  display: flex;
-  align-items: flex-start;
-}
+  .about-image-container {
+    flex: 0 0 auto;
+    width: 50%;
+    max-width: 300px;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 0rem;
+  }
 
 .about-image-container img {
   width: 100%;
@@ -835,6 +813,7 @@ body {
   border-radius: 4px;
   margin-bottom: 0rem;
   margin-top: 0rem;
+  margin-left: 1.3rem;
 }
 
 .about-content {
@@ -845,6 +824,7 @@ body {
 
 .about-content p {
   font-size: 1.3rem;
+  margin-left: 2rem;
 }
 
 
@@ -974,10 +954,6 @@ body {
 
   .horizontal-line{
     display: none;
-  }
-
-  .vertical-line {
-    display: none;  
   }
 
   .about-heading {
