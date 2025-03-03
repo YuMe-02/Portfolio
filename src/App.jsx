@@ -88,6 +88,13 @@ const AppContent = () => {
   const location = useLocation();
 
   useEffect(() => {
+
+    // Detect if user is on a Mac OS
+    const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+    if (isMac) {
+      document.body.classList.add('mac-os');
+    }
+
     const handleResize = () => {
       const newIsMobile = window.innerWidth < 768;
       

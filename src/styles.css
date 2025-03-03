@@ -782,7 +782,11 @@ body {
   position: relative;
   z-index: 2;
   padding: 2rem;
-  padding-top: 2rem;
+}
+
+/* Mac-specific styles */
+.mac-os .about-container {
+  padding-top: 3.7rem;
 }
 
 /* Media queries for responsive grid lines */
