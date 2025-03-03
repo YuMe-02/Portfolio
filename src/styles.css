@@ -297,6 +297,10 @@ body {
   padding-left: .5rem;
 }
 
+.mac-os .social-links {
+  padding-left: 1.1rem;
+}
+
 .social-icon {
   width: 32px;
   height: 32px;
