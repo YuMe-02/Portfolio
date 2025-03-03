@@ -89,6 +89,21 @@ const AppContent = () => {
 
   useEffect(() => {
 
+    // Detect Windows OS
+    const isWindows = navigator.platform.toUpperCase().indexOf('WIN') >= 0;
+
+    // Detect if user is using Firefox
+    const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+    if (isFirefox) {
+      document.body.classList.add('firefox');
+    }
+
+    // If both conditions are met, add a class to the body
+    if (isWindows && isFirefox) {
+      document.body.classList.add('windows-firefox');
+    }
+
+
     // Detect if user is on a Mac OS
     const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
     if (isMac) {

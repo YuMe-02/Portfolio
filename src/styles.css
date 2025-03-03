@@ -789,6 +789,11 @@ body {
   padding-top: 3.7rem;
 }
 
+.windows-firefox .about-container {
+  padding-top: 3.7rem; /* Adjust as needed */
+}
+
+
 /* Media queries for responsive grid lines */
 @media (max-width: 768px) {
   .horizontal-line {
@@ -824,14 +829,13 @@ body {
 .about-content {
   flex: 1;
   overflow-y: auto;
-  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .about-content p {
   font-size: 1.3rem;
   margin-left: 2rem;
 }
-
 
 @media (max-width: 1200px) {
   .main-content {
