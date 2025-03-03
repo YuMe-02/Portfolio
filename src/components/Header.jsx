@@ -6,7 +6,7 @@ const Header = () => {
       <h1>Darren Yu</h1>
 
       <p style={{ marginBottom: "12px", fontSize: "1.5rem" }}>
-        Developer & Designer
+        Developer & Photographer
       </p>
       
 
