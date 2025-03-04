@@ -5,7 +5,7 @@ import About from './components/About';
 import Menu from './components/Menu';
 import MobileNav from './components/MobileNav';
 import Viewfinder from './components/Viewfinder';
-import Inspo from './components/Inspo';
+import Experience from './components/Experience';
 import ProjectCard from './components/ProjectCard';
 import ProjectMenu from './components/ProjectMenu';
 import { projectDetails } from './components/ProjectsData';
@@ -208,7 +208,7 @@ const AppContent = () => {
               </div>
             )
           } />
-          <Route path="/inspiration" element={<Inspo />} />
+          <Route path="/experience" element={<Experience />} />
         </Routes>
       </div>
     </div>

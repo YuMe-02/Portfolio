@@ -11,20 +11,20 @@ export const projectDetails = {
     skills: ["Jupyter Notebooks", "Python", "Matplotlib", "Pandas"],
     imageUrl: "./DataMining.png",
     alt:"Joe",
-    projectUrl: "https://healora.com",
-    githubUrl: "https://github.com/yourusername/healora"
+    githubUrl: "https://github.com/YuMe-02/CustomerChurn"
   },  
   Diabetes: {
     id: "Diabetes",
     title: "Diabetes Prediction",
     date: "Mar.2024",
     category: "Portfolio",
-    type: "Design & Dev",
+    type: "AI & Dev",
     description: "AI-powered healthcare case study designed streamline patient care by integrating real-life medical records to decect diabetes. The following case study acheived 74% accuracy on a dataset of 70,000+ health records. And features an unsupervised learning approach, uncovering 4 distinct patient clusters.",
     skills: ["Jupyter Notebooks", "Python", "Matplotlib", "Pandas", "Kaggle"],
     imageUrl: "./Diabetes.jpg",
     alt:"Joe",
-    githubUrl: "https://github.com/yourusername/healora"
+    projectUrl: "https://docs.google.com/presentation/d/1vqn9T842E7Gxoage_Oi1wgsrBNO136pzwRdFLv4RaV4/edit?usp=sharing",
+    githubUrl: "https://github.com/YuMe-02/DiabetesPrediction"
   },  
   Hydro: {
       id: "Hydro",
@@ -52,7 +52,7 @@ export const projectDetails = {
     },
   Portfolio: {
       id: "Portfolio",
-      title: "Portfolio",
+      title: "Portfolio Website",
       date: "Jan.2025",
       category: "Portfolio",
       type: "Dev",

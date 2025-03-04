@@ -43,14 +43,14 @@ const Menu = ({ onNavigate, activeComponent }) => {
         </li>
         <li>
           <Link
-            to="/inspiration"
+            to="/experience"
             onClick={(e) => {
               e.preventDefault();
-              onNavigate('inspiration');
+              onNavigate('experience');
             }}
-            className={activeComponent === 'inspiration' ? 'active' : ''}
+            className={activeComponent === 'experience' ? 'active' : ''}
           >
-            Inspiration
+            Experience
           </Link>
         </li>
       </ul>
