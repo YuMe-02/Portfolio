@@ -1079,10 +1079,13 @@ body {
 }
 
 .timeline__cover{
+  position: relative;
   max-height: 85vh;
   background: transparent;
   padding: 100px 0;
   color: #ffffff;
+  overflow: scroll;
+  
 }
 .timeline__cover .timeline__title{
   max-width: 840px;
@@ -1248,4 +1251,13 @@ right: -38px;
   }
 }
 
+
+.content {
+  opacity: 1;
+  transition: opacity 0.7s;
+}
+
+.hidden {
+  opacity: 0;
+}
 /* timeline__cover ends */

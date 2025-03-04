@@ -7,7 +7,7 @@ const Experience = () => {
     
     <section class="timeline__cover">
         <div class="timeline__title">
-            <h2>Build A Photography Farm</h2>
+            <h2>Experiences</h2>
         </div>
         <div class="timeline">
             <ul>
@@ -46,6 +46,7 @@ const Experience = () => {
                         <p>After successful deployment, we provide ongoing support, monitoring, and updates to ensure optimal system performance.</p>
                     </div>
                 </li>
+
             </ul>
         </div>
     </section>
