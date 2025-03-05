@@ -554,16 +554,6 @@ body {
   margin-bottom: 0;
 }
 
-/* Inspo Styles */
-.inspo-content {
-  color: #fff;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  text-align: left;
-  max-height: 80vh; /* Adjust based on preference */
-  overflow-y: auto; /* Enables vertical scrolling */
-  padding-right: 10px; /* Adds space for scrollbar */
-}
 
 .projects-menu {
   position: absolute;
@@ -799,6 +789,57 @@ body {
   padding-top: 3.7rem; /* Adjust as needed */
 }
 
+.experience-menu {
+  position: absolute;
+  top: 50%;
+  right: -38%;
+  transform: translateY(-50%);
+  text-align: right;
+  background-color: transparent;
+  width: 40%; 
+  max-width: 25rem; /* Prevent excessive width on large screens */
+}
+  
+.experience-menu :hover{
+  color: #888;
+  font-size: 2.2rem;
+  transition-timing-function: ease-in;
+  transition: 0.3s;
+  }
+  
+.experience-menu h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-top: .5rem;
+  transition: opacity 0.3s ease;
+}
+  
+.experience-menu .group {
+  margin-bottom: 2rem;
+}
+  
+.experience-menu .group:hover h2 {
+  opacity: 0.7;
+}
+  
+.experience-menu .group:active h2 {
+  font-size: 3rem;
+  color: #fff;
+  transition: font-size 0.3s;
+}
+  
+.experience-menu .text-sm {
+  font-size: 0.875rem;
+  color: #bbb;
+}
+  
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem;
+}
 
 /* Media queries for responsive grid lines */
 @media (max-width: 768px) {
@@ -807,20 +848,20 @@ body {
     right: 20px;
   }
   
-  .japanese-text {
-    right: 20px;
-    font-size: 12px;
+  .experience-menu {
+    width: 100%;
+    right: 0%;
   }
 }
 
-  .about-image-container {
-    flex: 0 0 auto;
-    width: 50%;
-    max-width: 300px;
-    display: flex;
-    align-items: flex-start;
-    padding-left: 0rem;
-  }
+.about-image-container {
+  flex: 0 0 auto;
+  width: 50%;
+  max-width: 300px;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 0rem;
+}
 
 .about-image-container img {
   width: 100%;
@@ -1002,7 +1043,6 @@ body {
     padding-bottom: 1rem;
   }
 
-  /* Keep your existing mobile styles for projects */
   .projects-menu {
     width: 100%;
     right: 0%;
@@ -1054,7 +1094,6 @@ body {
       width: 100%;
   }
 
-
 }
 
 /* Add new media query for smaller devices */
@@ -1076,57 +1115,4 @@ body {
   .about-image-container {
     width: 80%;
   }
-}
-
-
-.experience-menu {
-  position: absolute;
-  top: 50%;
-  right: -38%;
-  transform: translateY(-50%);
-  text-align: right;
-  background-color: transparent;
-  width: 40%; 
-  max-width: 25rem; /* Prevent excessive width on large screens */
-}
-  
-.experience-menu :hover{
-  color: #888;
-  font-size: 2.2rem;
-  transition-timing-function: ease-in;
-  transition: 0.3s;
-  }
-  
-  .experience-menu h2 {
-  font-size: 2rem;
-  font-weight: normal;
-  margin-top: .5rem;
-  transition: opacity 0.3s ease;
-}
-  
-.experience-menu .group {
-  margin-bottom: 2rem;
-}
-  
-.experience-menu .group:hover h2 {
-  opacity: 0.7;
-}
-  
-.experience-menu .group:active h2 {
-  font-size: 3rem;
-  color: #fff;
-  transition: font-size 0.3s;
-}
-  
-.experience-menu .text-sm {
-  font-size: 0.875rem;
-  color: #bbb;
-}
-  
-.experience-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
-  gap: 2rem;
-  width: 100%;
-  padding: 1rem;
 }
