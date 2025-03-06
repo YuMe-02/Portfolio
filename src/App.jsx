@@ -18,7 +18,7 @@ const Home = () => (
   <div className="main-content">
     <div className="center-content">
       <div className="profile-image animate delay-1">
-        <img src="/cover.png" alt="Darren Yu" />
+        <img src={`${process.env.PUBLIC_URL}/cover.png`} alt="Darren Yu" />
       </div>
       <div className="bio">
         <h1 className="name animate delay-2">Darren Yu</h1>
@@ -116,12 +116,15 @@ const AppContent = () => {
   }, [isMobile, location.pathname, navigate]);
 
   const handleNavigation = (path) => {
-    if (path !== location.pathname.slice(1) && !isAnimating) {
+    // Special case for home
+    const navigatePath = path === 'home' ? '' : path;
+    
+    if ((navigatePath !== location.pathname.slice(1)) && !isAnimating) {
       setIsAnimating(true);
       setSelectedProject(null);
       setSelectedExperience(null);
       setTimeout(() => {
-        navigate(`/${path}`);
+        navigate(`/${navigatePath}`);
         setTimeout(() => {
           setIsAnimating(false);
         }, 500);

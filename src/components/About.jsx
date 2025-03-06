@@ -16,7 +16,7 @@ const About = () => {
 
       <div className="about-container">
         <div className="about-image-container">
-          <img src="pfp.png" alt="portrait" />
+          <img src={`${process.env.PUBLIC_URL}/pfp.png`} alt="portrait" />
         </div>
 
         <div className="about-content">
