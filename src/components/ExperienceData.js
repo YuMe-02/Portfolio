@@ -59,8 +59,8 @@
     },
     "robotics": {
       id: "robotics",
-      title: "Robotics Team Secretary and Treasurer",
-      company: "Jefferson High School",
+      title: "Robotics Team",
+      company: "JHS",
       location: "N/A",
       date: "Sep 2018 - May 2020",
       type: "Science and Technology",

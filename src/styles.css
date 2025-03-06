@@ -693,6 +693,7 @@ body {
   overflow: hidden;
   transition: transform 0.3s ease, border-color 0.3s ease;
   margin-bottom: 1.5rem;
+  margin: 5rem;
 }
 
 .experience-card:hover {
@@ -913,6 +914,9 @@ body {
   background-color: transparent;
   width: 40%; 
   max-width: 25rem; /* Prevent excessive width on large screens */
+  /* margin-top: 3rem;
+  margin-bottom: 10rem; */
+
 }
   
 .experience-menu :hover{
@@ -954,6 +958,23 @@ body {
   gap: 2rem;
   width: 100%;
   padding: 1rem;
+}
+
+
+@media (max-width: 1600px) {
+  .experience-menu h2{
+    width: 100%;
+    right: 0%;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .experience-menu :hover{
+    color: #888;
+    font-size: 1.5rem;
+    transition-timing-function: ease-in;
+    transition: 0.3s;
+    }
 }
 
 /* Media queries for responsive grid lines */
