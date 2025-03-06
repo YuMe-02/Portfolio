@@ -18,7 +18,7 @@ const Home = () => (
   <div className="main-content">
     <div className="center-content">
       <div className="profile-image animate delay-1">
-      <img src={`${process.env.PUBLIC_URL}/cover.png`} alt="cover" />
+        <img src="/cover.png" alt="Darren Yu" />
       </div>
       <div className="bio">
         <h1 className="name animate delay-2">Darren Yu</h1>
