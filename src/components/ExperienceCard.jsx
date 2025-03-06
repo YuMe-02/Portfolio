@@ -13,10 +13,10 @@ const ExperienceCard = ({
     <div className="experience-card">
       <div className="experience-content">
         <h3 className="experience-title">{title}</h3>
-        <div className="text-sm mb-2 text-gray-300">{company} • {location}</div>
-        <div className="text-sm mb-4 text-gray-400">{date}</div>
+        <div className="experience-company-location">{company} • {location}</div>
+        <div className=".experience-date">{date}</div>
         
-        <p className="experience-description">{description}</p>
+        <p className="experience-description"> {description}</p>
         
         {achievements && achievements.length > 0 && (
           <div className="mt-4">

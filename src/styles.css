@@ -712,15 +712,16 @@ body {
 }
 
 .experience-company-location {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: 800;
   color: #b8b8b8;
-  margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 .experience-date {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #999999;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .experience-description {
