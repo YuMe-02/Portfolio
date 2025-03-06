@@ -18,7 +18,7 @@
       title: "Product Photographer and Catalog Specialist",
       company: "William Stout Architectural Books",
       location: "San Francisco, CA",
-      date: "Sep 2023 - Present",
+      date: "Sep 2024 - Present",
       type: "Photography & Inventory Management",
       description: "Optimized cataloging workflows, improved inventory accuracy, and contributed to strategic pricing decisions through photography, editing, and data management.",
       skills: ["Photography", "Inventory Management", "Data Entry", "Adobe Photoshop"],
