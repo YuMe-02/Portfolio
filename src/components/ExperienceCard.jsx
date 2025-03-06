@@ -10,20 +10,20 @@ const ExperienceCard = ({
   date
 }) => {
   return (
-    <div className="project-card">
-      <div className="project-content">
-        <h3 className="project-title">{title}</h3>
+    <div className="experience-card">
+      <div className="experience-content">
+        <h3 className="experience-title">{title}</h3>
         <div className="text-sm mb-2 text-gray-300">{company} • {location}</div>
         <div className="text-sm mb-4 text-gray-400">{date}</div>
         
-        <p className="project-description">{description}</p>
+        <p className="experience-description">{description}</p>
         
         {achievements && achievements.length > 0 && (
           <div className="mt-4">
             <h4 className="text-lg mb-2">Key Achievements</h4>
-            <ul className="list-disc pl-5">
+            <ul className="experience-list">
               {achievements.map((achievement, index) => (
-                <li key={index} className="text-sm text-gray-300 mb-2">
+                <li key={index} className="experience-list-item text-gray-300 mb-2">
                   {achievement}
                 </li>
               ))}

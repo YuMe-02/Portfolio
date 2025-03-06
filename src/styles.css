@@ -742,13 +742,14 @@ body {
   list-style-type: disc;
   padding-left: 1.5rem;
   margin-bottom: 1rem;
+  padding-top: .5rem;
 }
 
 .experience-list-item {
   color: #cccccc;
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0rem;
 }
 
 .experience-skills-container {
@@ -964,6 +965,13 @@ body {
   .experience-menu {
     width: 100%;
     right: 0%;
+  }
+
+  .experience-menu h2{
+    width: 100%;
+    right: 0%;
+    font-size: 1.5rem;
+    font-weight: 600;
   }
 }
 
