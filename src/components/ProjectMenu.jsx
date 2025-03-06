@@ -1,7 +1,19 @@
-import React from 'react';
+// Add this to your ProjectMenu.jsx component
+import React, { useEffect, useRef } from 'react';
 import { projectDetails } from './ProjectsData';
 
 const ProjectMenu = ({ onProjectClick }) => {
+  const menuRef = useRef(null);
+  
+  useEffect(() => {
+    if (menuRef.current) {
+      // Enable scrolling for this element
+      menuRef.current.style.overflowY = 'auto';
+      menuRef.current.style.msOverflowStyle = 'auto'; // For IE
+      menuRef.current.style.scrollbarWidth = 'thin'; // For Firefox
+    }
+  }, []);
+
   // Convert the project details object into an array and take only the needed fields
   const projects = Object.values(projectDetails).map(({ id, title, date, category, type }) => ({
     id,
@@ -12,7 +24,7 @@ const ProjectMenu = ({ onProjectClick }) => {
   }));
 
   return (
-    <div className="projects-menu">
+    <div className="projects-menu" ref={menuRef}>
       {projects.map((project) => (
         <div 
           key={project.id}

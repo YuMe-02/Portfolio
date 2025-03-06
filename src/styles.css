@@ -563,7 +563,30 @@ body {
   text-align: right;
   background-color: transparent;
   width: 40%; 
-  max-width: 25rem; /* Prevent excessive width on large screens */
+  max-width: 25rem;
+  max-height: 25rem; /* Limit to 65% of viewport height */
+  overflow-y: auto; /* Make it scrollable */
+  padding: 2rem 0; /* Add padding to top and bottom */
+}
+
+/* Add a custom scrollbar styling for better aesthetics */
+.projects-menu::-webkit-scrollbar {
+  width: 5px;
+  display: block; /* Override the general scrollbar hiding */
+}
+
+.projects-menu::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.projects-menu::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.projects-menu::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
   
 .projects-menu :hover{
