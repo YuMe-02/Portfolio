@@ -27,6 +27,12 @@ body {
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+}
+
 .container {
   width: 90vw;
   height: 90vh;
@@ -617,10 +623,6 @@ body {
   margin: 5rem;
 }
   
-.project-card:hover {
-  transform: translateY(-5px);
-}
-  
 .project-image {
   width: 100%;
   height: auto;
@@ -697,10 +699,17 @@ body {
   margin: 5rem;
 }
 
-.experience-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(255, 255, 255, 0.25);
-}
+@media (max-width: 768px) {
+  .experience-card {
+    width: 100%;
+    margin: 0rem;
+  }
+
+  .project-card {
+    width: 100%; 
+    margin: 0rem;
+  }
+} 
 
 .experience-content {
   padding: 1.75rem;
@@ -1176,7 +1185,7 @@ body {
   .about-container {
     flex-direction: column;
     max-height: calc(100vh - 6rem);
-    overflow-y: auto;
+    overflow: hidden;
     padding: 0rem;
     -webkit-overflow-scrolling: touch;
   }
@@ -1285,3 +1294,4 @@ body {
     width: 80%;
   }
 }
+
