@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 /* * { background: #f001 !important } */
@@ -24,7 +23,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: auto;
 }
 
 @media (max-width: 768px) {
@@ -541,6 +540,7 @@ body {
   max-height: 80vh; /* Adjust based on preference */
   max-width: 90vw;
   overflow: hidden;
+  overflow-y: auto;
   padding-right: 1.8rem;
 }
 
@@ -891,13 +891,14 @@ body {
 }
 
 /* Adjust About section to work with grid lines */
-.about-section {
+/* .about-section {
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   z-index: 1;
-}
+  overflow: auto;
+} */
 
 /* Updated styles for About container to work with the grid lines */
 .about-container {
@@ -924,7 +925,7 @@ body {
   background-color: transparent;
   width: 40%; 
   max-width: 25rem;
-  max-height: 65vh; /* Limit to 65% of viewport height */
+  max-height: 75vh; /* Limit to 65% of viewport height */
   overflow-y: auto; /* Make it scrollable */
   padding: 2rem 0; /* Add padding to top and bottom */
 }
@@ -1185,7 +1186,7 @@ body {
   .about-container {
     flex-direction: column;
     max-height: calc(100vh - 6rem);
-    overflow: hidden;
+    overflow: auto;
     padding: 0rem;
     -webkit-overflow-scrolling: touch;
   }
@@ -1224,6 +1225,9 @@ body {
   .projects-menu {
     width: 100%;
     right: 0%;
+    max-height: 75vh; /* Limit to 65% of viewport height */
+    overflow-y: auto; /* Make it scrollable */
+    padding: 2rem 0; /* Add padding to top and bottom */
   }
 
   .project-content {
