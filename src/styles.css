@@ -540,7 +540,7 @@ body {
   flex-direction: row;
   max-height: 80vh; /* Adjust based on preference */
   max-width: 90vw;
-  overflow-y: auto; /* Enables vertical scrolling */
+  overflow: hidden;
   padding-right: 1.8rem;
 }
 
