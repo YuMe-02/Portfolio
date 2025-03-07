@@ -13,7 +13,7 @@ import ProjectMenu from './components/ProjectMenu';
 import { projectDetails } from './components/ProjectsData';
 import { experienceData } from './components/ExperienceData';
 // Import Home from modules folder
-import Home from './modules/Home';
+import Home from './components/Home';
 
 // Wrapper component to handle navigation logic
 const AppContent = () => {
