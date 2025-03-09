@@ -1,6 +1,10 @@
 # Brief Description
 
-This project is a simple portfolio style with a camera and cinema theme. It will show case my past engineering projects and contain informations that users can find useful about me. Currently looking at display ideas.
+This project is a simple portfolio style with a camera and cinema theme. It will show case my past engineering projects and contain informations that users can find useful about me. Currently looking at display ideas. 
+
+The site currently needs to be debugged on the mobile-end; non-safari useres are unable to scroll all the way to the bottom of the webpage and lower margin of the view finder, external links, and  are unaccessible because of this.
+
+Link: https://yume-02.github.io/Portfolio/
 
 # Getting Started with Create React App
 
